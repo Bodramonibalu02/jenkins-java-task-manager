@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">JENKINS CI/CD PRACTICE APP</p>
+        <h1>My Task Manager</h1>
+        <p class="subtitle">Create tasks, track progress, and ship changes through a pipeline.</p>
+      </div>
+      <span class="status" id="apiStatus">Checking API…</span>
+    </header>
+
+    <form id="taskForm" class="task-form">
+      <input id="title" type="text" placeholder="What needs to get done?" maxlength="120" required>
+      <input id="description" type="text" placeholder="Short description (optional)" maxlength="500">
+      <button type="submit">Add task</button>
+    </form>
+
+    <section class="toolbar">
+      <h2>Your tasks</h2>
+      <select id="filter" aria-label="Filter tasks">
+        <option value="all">All tasks</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+      </select>
+    </section>
+    <p id="message" class="message" aria-live="polite"></p>
+    <ul id="taskList" class="task-list"></ul>
+    <footer>Built to learn Jenkins · Java · Docker</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
